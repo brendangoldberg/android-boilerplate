@@ -11,6 +11,10 @@
 /.idea/gradle.xml
 /.idea/dictionaries/
 /.idea/copyright/
+/.idea/markdown-navigator/
+/.idea/markdown-navigator.xml
+/.idea/markdown-navigator.xml
+/.idea/codeStyles/Project.xml
 *.attach_pid*
 .DS_Store
 /build
