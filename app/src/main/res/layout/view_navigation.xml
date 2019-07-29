@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary">
+
+        <Button
+                app:layout_constraintRight_toLeftOf="@id/btn_nav_counter"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/nav_main"
+                android:textColor="@color/black"
+                style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/btn_nav_main"
+                android:background="@color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        <Button
+                app:layout_constraintRight_toLeftOf="@id/btn_nav_users"
+                app:layout_constraintLeft_toRightOf="@id/btn_nav_main"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"
+                style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/btn_nav_counter"
+                android:text="@string/nav_counter"
+                android:background="@color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        <Button
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btn_nav_counter"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"
+                style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/btn_nav_users"
+                android:text="@string/nav_users"
+                android:background="@color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

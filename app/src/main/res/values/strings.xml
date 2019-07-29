@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Example</string>
+
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+
+    <string name="nav_main">Main</string>
+    <string name="nav_counter">Counter</string>
+    <string name="nav_users">Users</string>
+
+    <string name="loading">Loading</string>
+
+</resources>
