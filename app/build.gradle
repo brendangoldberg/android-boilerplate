@@ -17,7 +17,13 @@ allOpen {
 }
 
 android {
+
+	def propertiesFile = rootProject.file("keystore.properties")
+	def properties = new Properties()
+	properties.load(new FileInputStream(propertiesFile))
+
 	compileSdkVersion configuration.compileSdkVersion
+
 	defaultConfig {
 		applicationId configuration.package
 
@@ -29,6 +35,7 @@ android {
 
 		buildConfigField "int", "MIN_SDK_VERSION", "$minSdkVersion.apiLevel"
 		buildConfigField "int", "MAX_SDK_VERSION", "$targetSdkVersion.apiLevel"
+		buildConfigField "String", "APPCENTER_SECRET", properties["APPCENTER_SECRET"]
 
 		testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 	}
@@ -199,6 +206,10 @@ dependencies {
 
 	implementation "com.jakewharton.timber:timber:${libraries.timber}"
 	implementation "com.squareup.retrofit2:converter-moshi:${libraries.moshiConverter}"
+
+	implementation "com.microsoft.appcenter:appcenter-analytics:${libraries.appCenter}"
+	implementation "com.microsoft.appcenter:appcenter-crashes:${libraries.appCenter}"
+
 }
 
 android.applicationVariants.all {

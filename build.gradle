@@ -36,7 +36,8 @@ buildscript {
 				moshi           : '1.8.0',
 				timber          : '4.7.1',
 				moshiConverter  : '2.6.0',
-				jacoco          : '0.8.4'
+				jacoco          : '0.8.4',
+				appCenter       : '2.2.0'
 		]
 
 		versionMajor = 0
