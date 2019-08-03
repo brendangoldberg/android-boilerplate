@@ -9,12 +9,12 @@ class Converters {
 
     private val moshi = Moshi.Builder().build()
 
-    private val addressAdapter = AddressJsonAdapter(moshi)
+    private val addressAdapter = AddressJsonAdapter(moshi).nullSafe()
 
     @TypeConverter
     fun toAddress(value: String): Address? = addressAdapter.fromJson(value)
 
     @TypeConverter
-    fun fromAddress(value: Address): String = addressAdapter.toJson(value)
+    fun fromAddress(value: Address?): String = addressAdapter.toJson(value)
 
 }

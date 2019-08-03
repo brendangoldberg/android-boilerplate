@@ -15,7 +15,7 @@ buildscript {
 				dagger          : '2.21',
 				daggerAndroid   : '2.22',
 				androidMonitor  : '1.2.0',
-				appcompat       : '1.1.0-beta01',
+				appcompat       : '1.1.0-rc01',
 				androidKtx      : '1.2.0-alpha02',
 				junit           : '4.12',
 				androidJunit    : '1.1.0',
@@ -35,7 +35,8 @@ buildscript {
 				room            : '2.2.0-alpha01',
 				moshi           : '1.8.0',
 				timber          : '4.7.1',
-				moshiConverter  : '2.6.0'
+				moshiConverter  : '2.6.0',
+				jacoco          : '0.8.4'
 		]
 
 		versionMajor = 0

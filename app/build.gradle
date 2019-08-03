@@ -81,7 +81,7 @@ android {
 }
 
 jacoco {
-	toolVersion = "0.8.4"
+	toolVersion = "${libraries.jacoco}"
 }
 
 task clearJacocoReport(type: Delete) {
@@ -182,7 +182,10 @@ dependencies {
 	//noinspection GradleDependency
 	implementation "androidx.fragment:fragment-testing:${libraries.fragmentTesting}"
 
+	//noinspection GradleDependency
 	implementation "androidx.navigation:navigation-fragment-ktx:${libraries.navigation}"
+
+	//noinspection GradleDependency
 	implementation "androidx.navigation:navigation-ui-ktx:${libraries.navigation}"
 
 	implementation "androidx.room:room-runtime:${libraries.room}"

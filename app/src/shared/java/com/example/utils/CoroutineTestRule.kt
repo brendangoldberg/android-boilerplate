@@ -2,10 +2,7 @@ package com.example.utils
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.test.TestCoroutineDispatcher
-import kotlinx.coroutines.test.TestCoroutineScope
-import kotlinx.coroutines.test.resetMain
-import kotlinx.coroutines.test.setMain
+import kotlinx.coroutines.test.*
 import org.junit.rules.TestRule
 import org.junit.runner.Description
 import org.junit.runners.model.Statement
@@ -34,6 +31,10 @@ class CoroutineTestRule : TestRule {
             }
 
         }
+    }
+
+    fun runBlockingTest(block: suspend () -> Unit) {
+        _coroutineScope.runBlockingTest { block() }
     }
 
 }

@@ -3,7 +3,7 @@ package com.example.data.repositories
 import com.example.data.daos.UserDao
 import org.mockito.Mockito.mock
 
-class FakeDBRepository : DBRepository {
+open class FakeDBRepository : DBRepository {
 
     private val fakeUserDao = mock(UserDao::class.java)
 

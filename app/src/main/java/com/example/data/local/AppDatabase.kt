@@ -35,6 +35,17 @@ abstract class AppDatabase : RoomDatabase() {
 
             return _instance!!
         }
+
+        fun inMemory(context: Context): AppDatabase {
+
+            _instance = Room.inMemoryDatabaseBuilder(
+                context.applicationContext,
+                AppDatabase::class.java
+            ).allowMainThreadQueries()
+                .build()
+
+            return _instance!!
+        }
     }
 
 }

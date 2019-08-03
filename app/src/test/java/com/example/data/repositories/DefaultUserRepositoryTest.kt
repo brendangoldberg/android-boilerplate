@@ -58,7 +58,7 @@ class DefaultUserRepositoryTest {
     }
 
     @Test
-    fun `should return network data`() = coroutineTestRule.coroutineScope.runBlockingTest {
+    fun `should return network data`() = coroutineTestRule.runBlockingTest {
         // Given
         val response = Response.success(users)
 
@@ -81,7 +81,7 @@ class DefaultUserRepositoryTest {
     }
 
     @Test
-    fun `should return error state`() = coroutineTestRule.coroutineScope.runBlockingTest {
+    fun `should return error state`() = coroutineTestRule.runBlockingTest {
         // Given
         val response = error<List<User>>()
 
